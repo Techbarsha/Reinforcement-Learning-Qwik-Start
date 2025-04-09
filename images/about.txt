@@ -1,0 +1,7 @@
+Task 1. Reinforcement learning 101
+Reinforcement learning (RL) is a form of machine learning whereby an agent takes actions in an environment to maximize a given objective (a reward) over this sequence of steps. Unlike more traditional supervised learning techniques, every data point is not labelled and the agent only has access to "sparse" rewards.
+
+While the history of RL can be dated back to the 1950s and there are a lot of RL algorithms out there, 2 easy to implement yet powerful deep RL algorithms have a lot of attractions recently: deep Q-network (DQN) and deep deterministic policy gradient (DDPG). We briefly introduce the algorithms and variants based on them in this section.
+The Deep Q-network (DQN) was introduced by Google DeepMind's group in this Nature paper in 2015. Encouraged by the success of deep learning in the field of image recognition, the authors incorporated deep neural networks into Q-Learning and tested their algorithm in the Atari Game Engine Simulator, in which the dimension of the observation space is very large.
+
+The deep neural network acts as a function approximator that predicts the output Q-values, or the desirability of taking an action, given a certain input state. Accordingly, DQN is a value-based method: in the training algorithm DQN updates Q-values according to Bellman's equation, and to avoid the difficulty of fitting a moving target, it employs a second deep neural network that serves as an estimation of target values.
